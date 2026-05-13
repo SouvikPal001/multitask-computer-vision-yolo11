@@ -81,21 +81,24 @@ pip install -r requirements.txt
 ```
 yolo11-multitask-pipeline/
 ├── main.py                 # Entry point - orchestrates all tasks
-├── classification.py       # Classification module
-├── detection.py           # Detection module
-├── segmentation.py        # Segmentation module
-├── pose.py               # Pose estimation module
-├── media/                # Test images directory
-│   ├── test_img.jpg      # Classification test image
-│   ├── bus.jpg           # Detection test image
-│   ├── messy_table.jpg   # Segmentation test image
-│   └── poses.jpg         # Pose estimation test image
-├── runs/                 # Output directory (auto-created)
-│   ├── classify/         # Classification results
-│   ├── detect/           # Detection results
-│   ├── segment/          # Segmentation results
-│   └── pose/             # Pose estimation results
-└── README.md            # This file
+├── models/                 # All model modules
+│   ├── __init__.py
+│   ├── classification.py   # Classification module
+│   ├── detection.py        # Detection module
+│   ├── segmentation.py     # Segmentation module
+│   └── pose.py             # Pose estimation module
+├── media/                  # Test images directory
+│   ├── test_img.jpg        # Classification test image
+│   ├── bus.jpg             # Detection test image
+│   ├── messy_table.jpg     # Segmentation test image
+│   └── poses.jpg           # Pose estimation test image
+├── runs/                   # Output directory (auto-created)
+│   ├── classify/           # Classification results
+│   ├── detect/             # Detection results
+│   ├── segment/            # Segmentation results
+│   └── pose/               # Pose estimation results
+├── requirements.txt        # Project dependencies
+└── README.md              # This file
 ```
 
 ## 🚀 Usage
