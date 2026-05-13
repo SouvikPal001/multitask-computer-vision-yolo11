@@ -5,7 +5,7 @@ from ultralytics import YOLO
 
 def train_pose():
     try:
-        model = YOLO('yolo11n-pose.pt')
+        model = YOLO('../yolo11n-pose.pt')
         print("Starting YOLO11 Pose Estimation Training...")
         results = model.train(
             data='coco8-pose.yaml',
@@ -27,7 +27,7 @@ def train_pose():
 def test_pose():
     try:
         # Find the latest pose model automatically
-        runs_dir = Path('runs/pose')
+        runs_dir = Path('../runs/pose')
         latest_model_dir = max(runs_dir.glob('pose_model*'), key=os.path.getctime)
         model_path = latest_model_dir / 'weights' / 'best.pt'
 

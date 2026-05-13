@@ -1,7 +1,7 @@
-from classification import train_classification, test_classification
-from detection import train_detection, test_detection
-from segmentation import train_segmentation, test_segmentation
-from pose import train_pose, test_pose
+from models.classification import train_classification, test_classification
+from models.detection import train_detection, test_detection
+from models.segmentation import train_segmentation, test_segmentation
+from models.pose import train_pose, test_pose
 
 
 def main():

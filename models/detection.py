@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 def train_detection():
     try:
-        model = YOLO('yolo11n.pt')
+        model = YOLO('../yolo11n.pt')
         print("Starting YOLO11 Detection Training...")
         results = model.train(
             data='coco128.yaml',
@@ -22,7 +22,7 @@ def train_detection():
 
 def test_detection():
     try:
-        model = YOLO('runs/detect/detection_model/weights/best.pt')
+        model = YOLO('../runs/detect/detection_model/weights/best.pt')
         print("Running detection test...")
         results = model.predict(
             source='media/bus.jpg',

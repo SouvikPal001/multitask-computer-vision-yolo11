@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 def train_classification():
     try:
-        model = YOLO('yolo11n-cls.pt')
+        model = YOLO('../yolo11n-cls.pt')
         print("Starting YOLO11 Classification Training...")
         results = model.train(
             data='cifar10',
@@ -22,7 +22,7 @@ def train_classification():
 
 def test_classification():
     try:
-        model = YOLO('runs/classify/classification_model/weights/best.pt')
+        model = YOLO('../runs/classify/classification_model/weights/best.pt')
         print("Running classification test...")
         results = model.predict(
             source='media/test_img.jpg',

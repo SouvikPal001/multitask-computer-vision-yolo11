@@ -5,7 +5,7 @@ from ultralytics import YOLO
 
 def train_segmentation():
     try:
-        model = YOLO('yolo11n-seg.pt')
+        model = YOLO('../yolo11n-seg.pt')
         print("Starting YOLO11 Segmentation Training...")
         results = model.train(
             data='coco8-seg.yaml',
@@ -27,7 +27,7 @@ def train_segmentation():
 def test_segmentation():
     try:
         # Find the latest segmentation model automatically
-        runs_dir = Path('runs/segment')
+        runs_dir = Path('../runs/segment')
         latest_model_dir = max(runs_dir.glob('segmentation_model*'), key=os.path.getctime)
         model_path = latest_model_dir / 'weights' / 'best.pt'
 
